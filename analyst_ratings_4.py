@@ -7,16 +7,19 @@ Created on Mon Aug 17 09:14:06 2020
 
 # Goal: Pull analyst ratings from MarketBeat
 
-import requests
-from bs4 import BeautifulSoup as bs
-import re
-import locale
-import pandas as pd
-import time
+# Initialize packages, locale, and MarketBeat URL string
 
-# Initialize locale (for converting to float) and Marketbeat URL string
-locale.setlocale(locale.LC_ALL,'')
-MARKETBEAT_NASDAQ_URL = 'http://www.marketbeat.com/stocks/NASDAQ/{0}'
+def initilalize():
+    import requests
+    from bs4 import BeautifulSoup as bs
+    import re
+    import locale
+    import pandas as pd
+    import time
+
+    # Initialize locale (for converting to float) and Marketbeat URL string
+    locale.setlocale(locale.LC_ALL,'')
+    MARKETBEAT_NASDAQ_URL = 'http://www.marketbeat.com/stocks/NASDAQ/{0}'
 
 
 # Function to download/organize HMTL and pull data out
